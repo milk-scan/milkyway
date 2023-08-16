@@ -14,7 +14,7 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "MilkyWayUI",
       // the name of the output files when the build is run
-      fileName: "milky-way-ui",
+      fileName: "milkyway-ui",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import FccButton from './components/FccButton.vue'
+import FccButton from "./components/FccButton.vue";
+import FullPage404 from "./components/FullPage404.vue";
 </script>
 
 <template>
   <FccButton text="My teste!"></FccButton>
-   
+  <FullPage404
+    miniTitle="MilkScan - Página principal"
+    title="Under construction"
+    subtitle=" Brazilian Startup developing a new way to manage dairy herds."
+    socialLink="https://www.linkedin.com/company/milk-scan/"
+  />
 </template>
 
 <style scoped>

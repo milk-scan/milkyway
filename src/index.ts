@@ -1,3 +1,4 @@
 import FccButton from "./components/FccButton.vue";
+import FullPage404 from "./components/FullPage404.vue";
 
-export { FccButton };
+export { FccButton, FullPage404 };
