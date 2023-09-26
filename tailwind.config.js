@@ -3,7 +3,6 @@
 const colors = require("tailwindcss/colors");
 
 export default {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   content: [
     "./public/index.html",
     "./index.html",
@@ -11,7 +10,6 @@ export default {
   ],
   theme: {
     extend: {
-      ...colors,
     },
   },
   plugins: [],

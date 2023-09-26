@@ -1,4 +1,12 @@
-import FccButton from "./components/FccButton.vue";
-import FullPage404 from "./components/FullPage404.vue";
+import './style.css'
+import './assets/styles/creatoDisplay.scss';
 
-export { FccButton, FullPage404 };
+import * as components from './components';
+import { App } from 'vue';
+
+export default function install (app: App) {
+  for (const key in components) {
+    // @ts-expect-error
+    app.component(key, components[key])
+  }
+}
