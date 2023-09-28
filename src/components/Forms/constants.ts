@@ -3,6 +3,7 @@ type SchemaFields = {
     name: string,
     label: string,
     type: string,
+    variation: 'regular',
     children: Array<{ 
         tag: string, 
         text: string, 

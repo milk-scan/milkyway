@@ -7,7 +7,7 @@
                 v-for="{ name, label, type, children, placeholder, validateSuccess, successMessage, disabled, ...attrs } in schema.fields"
                 :key="name">
                 <Field :id="name" :name="name" v-bind="attrs" v-slot="{ field }">
-                    <EraInput :type="type" :label="label" :placeholder="placeholder" :validateSuccess="validateSuccess"
+                    <MilkInput :type="type" :label="label" :placeholder="placeholder" :validateSuccess="validateSuccess"
                         :disabled="disabled" :success-message="successMessage" v-bind="field" />
 
                     <template v-if="children && children.length">

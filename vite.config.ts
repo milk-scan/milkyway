@@ -2,11 +2,15 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import { defineConfig } from 'vite'
 import { resolve } from "path";
 import vue from '@vitejs/plugin-vue'
+import libAssetsPlugin from '@laynezh/vite-plugin-lib-assets'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    cssInjectedByJsPlugin()
+    cssInjectedByJsPlugin(),
+    libAssetsPlugin({
+      outputPath: 'assets/images'
+    })
   ],
   build: {
     lib: {
@@ -27,6 +31,11 @@ export default defineConfig({
           vue: "Vue",
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': './src',
     },
   },
 })

@@ -1,10 +1,10 @@
 <template>
     <main class="grid grid-cols-12 h-screen">
-        <div :class="twMerge('cow-placement col-span-2 bg-slate-600 text-white', cowPlacement)">
-            cow here
+        <div :class="twMerge('cow-placement col-span-2 bg-blueberry-700 flex justify-center', cowPlacement)">
+           <slot name="image"></slot>
         </div>
-        <div :class="twMerge('bg-white col-span-10 text-blue-300', contentPlacement)">
-            <slot></slot>
+        <div :class="twMerge('bg-sil bg-silver-50 col-span-10', contentPlacement)">
+            <slot name="content"></slot>
         </div>
     </main>
 </template>
@@ -16,6 +16,6 @@ const props = defineProps<{
     smallCow: boolean
 }>();
 
-const cowPlacement = props.smallCow ? 'col-span-2' : 'col-span-7'
+const cowPlacement = props.smallCow ? 'col-span-2 items-end py-36 px-10' : 'col-span-7 items-center'
 const contentPlacement = props.smallCow ? 'col-span-10' : 'col-span-5'
 </script>
