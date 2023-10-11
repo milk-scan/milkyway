@@ -9,11 +9,12 @@ type SchemaFields = {
         text: string, 
         childAttrs: Object 
     }>
-    attrs: Object,
+    attrs: Object | any,
     placeholder?: string,
     validateSuccess: boolean,
     successMessage: string | undefined,
-    disabled: boolean | undefined
+    disabled: boolean | undefined,
+    colPlacement: string,
 }
 
 export type Schema = {

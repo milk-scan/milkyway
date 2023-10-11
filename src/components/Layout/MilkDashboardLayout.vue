@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-rows-10" style="height: calc(100vh - 64px)">
-        <div :class="['row-span-4 justify-start items-start gap-2.5 inline-flex', upperSectionColor]">
+        <div :class="['row-span-3 justify-start items-start gap-2.5 inline-flex', upperSectionColor]">
             <slot name="upper-section"></slot>
         </div>
         <div

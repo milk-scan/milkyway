@@ -17,5 +17,5 @@ const props = defineProps<{
 }>();
 
 const cowPlacement = props.smallCow ? 'col-span-2 items-end py-36 px-10' : 'col-span-7 items-center'
-const contentPlacement = props.smallCow ? 'col-span-10' : 'col-span-5'
+const contentPlacement = props.smallCow ? 'col-span-10' : 'col-span-5 flex justify-center items-center'
 </script>

@@ -48,7 +48,11 @@ const props = defineProps({
     disabled: {
         type: Boolean,
         default: false
-    }
+    },
+    size: {
+        type: String,
+        default: 'normal'
+    },
 });
 
 // use `toRef` to create reactive references to `name` prop which is passed to `useField`
@@ -65,7 +69,7 @@ const {
     handleChange,
     meta,
 } = useField(name, undefined, {
-    initialValue: props.value,
+    initialValue: props.value
 });
 
 const variations = {
@@ -82,6 +86,16 @@ const variations = {
 const labelStateStyle = variations[props.variation].label;
 const inputStateStyle = variations[props.variation].input;
 
+const inputSize = computed(() => {
+    if (props.size == 'normal') return '';
+    if (props.size == 'large') return 'h-[62px]';
+})
+
+const labelInputSize = computed(() => {
+    if (props.size == 'normal') return 'text-normal';
+    if (props.size == 'large') return 'text-lg';
+})
+
 const labelStyle = computed(() => {
     const { valid, dirty } = meta;
     return validInputStyle(labelStateStyle, valid, dirty, props.validateSuccess);
@@ -89,26 +103,29 @@ const labelStyle = computed(() => {
 
 const inputStyle = computed(() => {
     const { valid, dirty } = meta;
+    console.log({ meta })
     const { validateSuccess, disabled } = props;
     return validInputStyle(inputStateStyle, valid, dirty, validateSuccess, disabled);
 });
 
 const showSuccessMessage = computed(() => {
-    if(props.disabled) return false;
+    if (props.disabled) return false;
     return meta.valid && props.validateSuccess && meta.dirty
 })
 
 const showErrorMessage = computed(() => {
-    if(props.disabled) return false;
-    return !meta.valid && meta.dirty
+    const { valid, dirty } = meta;
+    console.log({ meta, name })
+    if (props.disabled) return false;
+    return !valid && dirty
 })
 </script>
 
 <template>
     <div class="relative">
-        <label :for="name" :class="labelStyle">{{ label }}</label>
-        <input :name="name" :id="name" :type="type" :value="inputValue" :placeholder="placeholder" :class="inputStyle"
-            @input="handleChange" @blur="handleBlur" :disabled="disabled" />
+        <label :for="name" :class="[labelStyle, labelInputSize]">{{ label }}</label>
+        <input :name="name" :id="name" :type="type" :value="inputValue" :placeholder="placeholder"
+            :class="[inputStyle, inputSize]" @input="handleChange" @blur="handleBlur" :disabled="disabled" />
 
         <input-success-message :enable="showSuccessMessage" :message="successMessage" />
         <input-error-message :enable="showErrorMessage" :message="errorMessage" />

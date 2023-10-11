@@ -3,22 +3,29 @@
 <template>
     <Form v-slot="{ handleSubmit }" as="div">
         <form @submit="handleSubmit($event, onSubmit)">
-            <template
-                v-for="{ name, label, type, children, placeholder, validateSuccess, successMessage, disabled, ...attrs } in schema.fields"
-                :key="name">
-                <Field :id="name" :name="name" v-bind="attrs" v-slot="{ field }">
-                    <MilkInput :type="type" :label="label" :placeholder="placeholder" :validateSuccess="validateSuccess"
-                        :disabled="disabled" :success-message="successMessage" v-bind="field" />
+            <div class="grid grid-cols-10 gap-6">
+                <template
+                    v-for="{ name, label, variation, type, children, placeholder, validateSuccess, successMessage, disabled, colPlacement, ...attrs } in schema.fields"
+                    :key="name">
+                    <div :class="colPlacement">
+                        <Field :id="name" :name="name" v-bind="attrs" v-slot="{ field }">
+                            <MilkInput :type="type" :label="label" :placeholder="placeholder"
+                                :validateSuccess="validateSuccess" :disabled="disabled" :success-message="successMessage"
+                                :variation="variation" v-bind="field"/>
 
-                    <template v-if="children && children.length">
-                        <component v-for="({ tag, text, ...childAttrs }, idx) in children" :key="idx" :is="tag"
-                            v-bind="childAttrs">
-                            {{ text }}
-                        </component>
-                    </template>
-                </Field>
-            </template>
-            <button class="btn-primary">Submit</button>
+                            <template v-if="children && children.length">
+                                <component v-for="({ tag, text, ...childAttrs }, idx) in children" :key="idx" :is="tag"
+                                    v-bind="childAttrs">
+                                    {{ text }}
+                                </component>
+                            </template>
+                        </Field>
+                    </div>
+                </template>
+            </div>
+            <div class="col-span-10 mt-3">
+                <button type="submit" class="h-[62px] px-[215px] py-5 text-white bg-blue-900 rounded-[10px] border border-blue-900 justify-center items-center gap-2.5 inline-flex w-full">Entrar</button>
+            </div>
         </form>
     </Form>
 </template>
