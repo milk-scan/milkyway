@@ -1,26 +1,29 @@
 <template>
-    <div class="grid grid-rows-10" style="height: calc(100vh - 64px)">
-        <div :class="['row-span-3 justify-start items-start gap-2.5 inline-flex', upperSectionColor]">
-            <slot name="upper-section"></slot>
+    <div class="grow flex flex-col">
+        <div name="content-section" class="grow flex flex-col">
+            <div class="grid px-3 grid-cols-12 sm:h-auto md:h-[20vh]"    >
+                <slot name="upper-section"></slot>
+            </div>
+            <div class="grow p-3 grid grid-rows-7 grid-cols-12">
+                <slot name="lower-section"></slot>  
+            </div>
         </div>
-        <div
-            :class="['row-span-6 px-40 pt-2.5 pb-5 flex-col justify-start items-center gap-2.5 inline-flex', lowerSectionColor]">
-            <slot name="lower-section"></slot>
+        <div name="bg-filler" :class="['absolute w-full -z-10', lowerSectionColor]" style="height: calc(100vh - 64px)">
+            <div name="bg-filler-top" :class="['w-full', upperSectionColor]" style="height: 30vh"></div>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { ColorPallete } from './constants';
 
 const props = defineProps({
     colors: {
         default: () => {
             return {
                 primary: 'bg-blueberry-700',
-                secondary: 'bg-silver-200'
-            } as ColorPallete
+                secondary: 'bg-truffle-100'
+            }
         }
     },
     inverted: {
