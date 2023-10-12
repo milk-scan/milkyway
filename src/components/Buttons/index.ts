@@ -1,3 +1,4 @@
-import MilkButton from './MilkButton.vue'
+import MilkTextButton from './MilkTextButton.vue'
+import MilkIconButton from './MilkIconButton.vue'
 
-export { MilkButton }
+export { MilkTextButton, MilkIconButton }

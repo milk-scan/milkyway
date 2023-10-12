@@ -82,7 +82,6 @@
 </template>
 
 <script setup lang="ts">
-import { ColorPallete } from './constants';
 import { twMerge } from 'tailwind-merge';
 
 defineProps({
@@ -95,7 +94,7 @@ defineProps({
             return {
                 primary: 'bg-blueberry-700',
                 secondary: 'bg-silver-200'
-            } as ColorPallete
+            }
         }
     },
 })
