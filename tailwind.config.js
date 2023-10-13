@@ -4,6 +4,7 @@ const colors = require('tailwindcss/colors')
 export default {
   darkMode: 'class',
   content: [
+    './node_modules/flowbite/**/*.js',
     "./public/index.html",
     "./index.html",
     "./src/components/**/*.{vue,js,ts,jsx,tsx}",
@@ -38,7 +39,7 @@ export default {
           900: "#6e3d15",
           950: "#401f08"
         },
-        mocha: {
+        macha: {
           50: "#f2f9ec",
           100: "#e2f1d6",
           200: "#c7e4b2",

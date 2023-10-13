@@ -1,7 +1,7 @@
 <template>
   <button
     :id="btnId"
-    :data-tooltip-target="tooltipId()"
+    :data-tooltip-target="tooltip != '' ? tooltipId() : null"
     :class="twMerge('p-2.5 border rounded-lg', buttonStyle)"
   >
     <Icon :icon="icon" :class="buttonIconStyle" />
@@ -25,7 +25,6 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import { useVariation } from "./useVariation";
-
 import { twMerge } from "tailwind-merge";
 
 const props = defineProps({
