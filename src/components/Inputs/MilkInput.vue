@@ -97,35 +97,40 @@ const labelInputSize = computed(() => {
 })
 
 const labelStyle = computed(() => {
-    const { valid, dirty } = meta;
-    return validInputStyle(labelStateStyle, valid, dirty, props.validateSuccess);
+    return validInputStyle(labelStateStyle, meta, props);
 });
 
 const inputStyle = computed(() => {
-    const { valid, dirty } = meta;
-    console.log({ meta })
-    const { validateSuccess, disabled } = props;
-    return validInputStyle(inputStateStyle, valid, dirty, validateSuccess, disabled);
+    return validInputStyle(inputStateStyle, meta, props);
 });
 
 const showSuccessMessage = computed(() => {
-    if (props.disabled) return false;
-    return meta.valid && props.validateSuccess && meta.dirty
+    const { disabled, validateSuccess } = props;
+    if (disabled) return false;
+
+    const { valid, dirty, validated } = meta;
+
+    const validAndHasInput = valid && dirty;
+    const maybeEmptyButValidated = valid && validated;
+
+    return validateSuccess && (validAndHasInput || maybeEmptyButValidated)
 })
 
 const showErrorMessage = computed(() => {
-    const { valid, dirty } = meta;
-    console.log({ meta, name })
-    if (props.disabled) return false;
-    return !valid && dirty
+    const { disabled } = props;
+    if (disabled) return false;
+
+    const { valid, dirty, validated } = meta;
+    return (!valid && dirty) || !valid && validated
 })
 </script>
 
 <template>
     <div class="relative">
         <label :for="name" :class="[labelStyle, labelInputSize]">{{ label }}</label>
-        <input :name="name" :id="name" :type="type" :value="inputValue" :placeholder="placeholder"
-            :class="[inputStyle, inputSize]" @input="handleChange" @blur="handleBlur" :disabled="disabled" />
+        <input :validate-on-input="false" :name="name" :id="name" :type="type" :value="inputValue"
+            :placeholder="placeholder" :class="[inputStyle, inputSize]" @input="handleChange" @blur="handleBlur"
+            :disabled="disabled" />
 
         <input-success-message :enable="showSuccessMessage" :message="successMessage" />
         <input-error-message :enable="showErrorMessage" :message="errorMessage" />
