@@ -1,7 +1,31 @@
 <template>
     <div
-        class="px-[30px] pt-[30px] pb-5 bg-white rounded-[20px] shadow flex-col justify-start items-center gap-2.5 inline-flex">
-        
-        <slot></slot>
+        class="px-[25px] pt-[25px] pb-5 flex flex-col gap-2.5 justify-start rounded-[20px] shadow bg-white">
+        <div class="card-header inline-flex justify-between items-center gap-2">
+            <card-title :title="header.title" class="grow"/>
+            <filter-button v-if="header.filter" />
+            <slot name="header-slot"></slot>
+        <redirect-icon-button :redirect="header.redirect"/>
+        </div>         
+        <slot name="card-slot"></slot>
     </div>
 </template>
+
+<script setup lang="ts">
+import CardTitle from "../Titles/CardTitle.vue"
+import FilterButton from "../Buttons/FilterButton.vue"
+import RedirectIconButton from "../Buttons/RedirectIconButton.vue"
+
+defineProps({
+    header: {
+        default:{ 
+            title: '', 
+            filter: false, 
+            redirect: {
+                label: '',
+                link: '/',
+            }}
+
+    }
+})
+</script>

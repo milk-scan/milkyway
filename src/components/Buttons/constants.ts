@@ -1,3 +1,14 @@
+export type RedirectIconButton = {
+    label: string,
+    link: string
+}
+
+export type SmallTextIconButton = {
+    icon: string,
+    label: string,
+    extraStyle: string,
+}
+
 type ButtonVariation = {
     buttonStyle: string;
     buttonIconStyle: string;
