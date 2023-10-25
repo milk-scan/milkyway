@@ -20,7 +20,7 @@ const ghost = <ButtonVariation>{
 }
 
 const dark = <ButtonVariation>{
-    buttonStyle: 'border-blueberry-900 hover:border-blueberry-500 bg-blueberry-900 hover:bg-blueberry-5²00',
+    buttonStyle: 'border-blueberry-900 hover:border-blueberry-500 bg-blueberry-900 hover:bg-blueberry-500',
     buttonIconStyle: 'h-8 w-8 text-truffle-200',
     buttonTextStyle: 'text-truffle-200',
     tooltipStyle: 'tracking-wide font-light text-truffle-50 bg-blueberry-900'

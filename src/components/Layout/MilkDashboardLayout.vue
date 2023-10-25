@@ -39,4 +39,5 @@ const upperSectionColor = computed(() => {
 const lowerSectionColor = computed(() => {
     return props.inverted ? props.colors.primary : props.colors.secondary;
 });
+
 </script>

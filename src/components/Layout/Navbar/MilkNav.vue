@@ -1,32 +1,21 @@
 <template>
-  <nav
-    :class="
-      twMerge(
-        'bg-blueberry-700 border-gray-200 dark:bg-gray-900',
-        colors.primary
-      )
-    "
-  >
+  <nav :class="twMerge('bg-blueberry-700', colors.primary)">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-4 px-2"
+      class="xl:max-w-screen-xl 2xl:max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto pt-4 px-2"
     >
       <a href="/" id="logo" class="flex items-center">
-        <img
-          src="@/assets/images/logos/svg/Horizontal.svg"
-          class="h-8 ml-3 md:h-12"
-          alt="Milk Scan Logo"
-        />
+        <img :src="imageUrl" class="h-8 ml-3 md:h-12" alt="Milk Scan Logo" />
       </a>
       <div class="flex items-center mr-3 md:mr-0 md:order-2">
         <button
+          id="user-menu-button"
           type="button"
           :class="
             twMerge(
-              'inline-flex items-center py-1.5 px-2.5 rounded-lg gap-3 min-w-[180px] hover:bg-black/5',
+              'min-w-[180px] inline-flex items-center py-1.5 px-2.5 gap-3 rounded-lg  hover:bg-black/10 focus:bg-black/5',
               colors.primary
             )
           "
-          id="user-menu-button"
           aria-expanded="false"
           data-dropdown-toggle="user-dropdown"
           data-dropdown-placement="bottom"
@@ -34,14 +23,16 @@
         >
           <span class="sr-only">Open user menu</span>
           <user-avatar-fallback-initials :profile="profile" />
-          <span class="text-blueberry-900">{{ profile.name }}</span>
+          <span :class="twMerge('text-blueberry-200', colors.secondary)">{{
+            profile.name
+          }}</span>
           <Icon
             :icon="
               isDropdownOpen
                 ? 'majesticons:chevron-up'
                 : 'majesticons:chevron-down'
             "
-            class="w-5 h-5 text-blueberry-900"
+            :class="twMerge('w-5 h-5 text-blueberry-200', colors.secondary)"
           />
         </button>
 
@@ -80,29 +71,38 @@ import { initFlowbite } from "flowbite";
 import { PropType, onMounted, ref } from "vue";
 import { Icon } from "@iconify/vue";
 
-defineProps({
-  profile: {
-    type: Object as PropType<Profile>,
-    required: true,
-    default: () => <Profile>{ name: "", photo: "" },
+const props = defineProps({
+  colors: {
+    default: () => {
+      return {
+        primary: "",
+        secondary: "",
+      };
+    },
+  },
+  logo: {
+    type: String,
+    default: "Horizontal.svg",
   },
   navLinks: {
     type: Array<NavButton>,
     default: () => [],
   },
+  profile: {
+    type: Object as PropType<Profile>,
+    required: true,
+    default: () => <Profile>{ name: "", photo: "" },
+  },
   dropdownLinks: {
     type: Array<UserDropdownItem>,
     default: () => [],
   },
-  colors: {
-    default: () => {
-      return {
-        primary: "bg-blueberry-700",
-        secondary: "bg-silver-200",
-      };
-    },
-  },
 });
+
+const imageUrl = new URL(
+  `/src/assets/images/logos/svg/${props.logo}`,
+  import.meta.url
+).href;
 
 onMounted(() => {
   initFlowbite();
