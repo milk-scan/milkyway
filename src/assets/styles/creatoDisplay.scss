@@ -1,53 +1,84 @@
-/*  Readex */
 @font-face {
-	font-family: CreatoDisplayBlack;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-Black.otf);
+	font-weight: 900;
+	font-style: normal;
 }
 @font-face {
-	font-family: CreatoDisplayBlackItalic;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-BlackItalic.otf);
+	font-weight: 900;
+	font-style: italic;
 }
 @font-face {
-	font-family: CreatoDisplayBold;
-	src: url(../fonts/CreatoDisplay/CreatoDisplay-Bold.otf);
-}
-@font-face {
-	font-family: CreatoDisplayBoldItalic;
-	src: url(../fonts/CreatoDisplay/CreatoDisplay-BoldItalic.otf);
-}
-@font-face {
-	font-family: CreatoDisplayBoldItalic;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-ExtraBold.otf);
+	font-weight: 800;
+	font-style: normal;
 }
 @font-face {
-	font-family: CreatoDisplayLight;
-	src: url(../fonts/CreatoDisplay/CreatoDisplay-Light.otf);
+	font-family: CreatoDisplay;
+	src: url(../fonts/CreatoDisplay/CreatoDisplay-ExtraBoldItalic.otf);
+	font-weight: 800;
+	font-style: italic;
 }
 @font-face {
-	font-family: CreatoDisplayLightItalic;
-	src: url(../fonts/CreatoDisplay/CreatoDisplay-LightItalic.otf);
+	font-family: CreatoDisplay;
+	src: url(../fonts/CreatoDisplay/CreatoDisplay-Bold.otf);
+	font-weight: 700;
+	font-style: normal;
 }
 @font-face {
-	font-family: CreatoDisplayLightItalic;
+	font-family: CreatoDisplay;
+	src: url(../fonts/CreatoDisplay/CreatoDisplay-BoldItalic.otf);
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-Medium.otf);
+	font-weight: 500;
+	font-style: normal;
 }
 @font-face {
-	font-family: CreatoDisplayLightItalic;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-MediumItalic.otf);
+	font-weight: 500;
+	font-style: italic;
 }
 @font-face {
-	font-family: CreatoDisplayRegular;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-Regular.otf);
+	font-weight: 400;
+	font-style: normal;
 }
 @font-face {
-	font-family: CreatoDisplayRegularItalic;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-RegularItalic.otf);
+	font-weight: 400;
+	font-style: italic;
 }
 @font-face {
-	font-family: CreatoDisplayThin;
+	font-family: CreatoDisplay;
+	src: url(../fonts/CreatoDisplay/CreatoDisplay-Light.otf);
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: CreatoDisplay;
+	src: url(../fonts/CreatoDisplay/CreatoDisplay-LightItalic.otf);
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-Thin.otf);
+	font-weight: 265;
+	font-style: normal;
 }
 @font-face {
-	font-family: CreatoDisplayThinItalic;
+	font-family: CreatoDisplay;
 	src: url(../fonts/CreatoDisplay/CreatoDisplay-ThinItalic.otf);
+	font-weight: 265;
+	font-style: italic;
 }
