@@ -17,115 +17,81 @@
           alt="Milk Scan Logo"
         />
       </a>
-      <div class="flex items-center md:order-2">
+      <div class="flex items-center mr-3 md:mr-0 md:order-2">
         <button
           type="button"
-          class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+          :class="
+            twMerge(
+              'inline-flex items-center py-1.5 px-2.5 rounded-lg gap-3 min-w-[180px] hover:bg-black/5',
+              colors.primary
+            )
+          "
           id="user-menu-button"
           aria-expanded="false"
           data-dropdown-toggle="user-dropdown"
           data-dropdown-placement="bottom"
+          @click="isDropdownOpen = !isDropdownOpen"
         >
           <span class="sr-only">Open user menu</span>
-          <img class="w-8 h-8 rounded-full" :src="picPath" alt="user photo" />
+          <user-avatar-fallback-initials :profile="profile" />
+          <span class="text-blueberry-900">{{ profile.name }}</span>
+          <Icon
+            :icon="
+              isDropdownOpen
+                ? 'majesticons:chevron-up'
+                : 'majesticons:chevron-down'
+            "
+            class="w-5 h-5 text-blueberry-900"
+          />
         </button>
-        <!-- Dropdown menu -->
-        <div
-          :class="
-            twMerge(
-              'z-50 hidden my-4 text-base list-none bg-blueberry-700 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600',
-              colors.primary
-            )
-          "
-          id="user-dropdown"
-        >
-          <div class="px-4 py-3">
-            <span class="block text-sm text-gray-900 dark:text-white"
-              >Bonnie Green</span
-            >
-            <span
-              class="block text-sm text-gray-500 truncate dark:text-gray-400"
-              >name@flowbite.com</span
-            >
-          </div>
-          <ul class="py-2" aria-labelledby="user-menu-button">
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >Dashboard</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >Settings</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >Earnings</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >Sign out</a
-              >
-            </li>
-          </ul>
-        </div>
+
+        <!-- User Dropdown Menu -->
+        <user-dropdown :links="dropdownLinks"></user-dropdown>
+
+        <!-- Collapsable navmenu -->
         <button
           data-collapse-toggle="navbar-user"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex md:hidden items-center p-2 w-10 h-10 justify-center rounded-lg text-sm text-truffle-500 hover:text-truffle-300 focus:text-truffle-700 focus:bg-truffle-200"
           aria-controls="navbar-user"
           aria-expanded="false"
         >
           <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+          <Icon icon="lucide:menu" class="w-6 h-6" />
         </button>
       </div>
-      <nav-buttons
-       :colors="colors"
-       :links="links"
-       />
+      <div
+        class="grow items-center justify-between md:justify-end md:pr-16 hidden w-full md:flex md:w-auto md:order-1"
+        id="navbar-user"
+      >
+        <nav-buttons :colors="colors" :links="navLinks" />
+      </div>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { twMerge } from "tailwind-merge";
 import NavButtons from "./NavButtons.vue";
-import { NavButton } from "./constants";
-import {initFlowbite} from 'flowbite';
-import { onMounted } from "vue";
+import UserDropdown from "./UserDropdown.vue";
+import UserAvatarFallbackInitials from "./UserAvatarFallbackInitials.vue";
+import { twMerge } from "tailwind-merge";
+import { NavButton, Profile, UserDropdownItem } from "./constants";
+import { initFlowbite } from "flowbite";
+import { PropType, onMounted, ref } from "vue";
+import { Icon } from "@iconify/vue";
 
 defineProps({
-  picPath: {
-    type: String,
-    default: "",
+  profile: {
+    type: Object as PropType<Profile>,
+    required: true,
+    default: () => <Profile>{ name: "", photo: "" },
   },
-  links: {
+  navLinks: {
     type: Array<NavButton>,
+    default: () => [],
+  },
+  dropdownLinks: {
+    type: Array<UserDropdownItem>,
     default: () => [],
   },
   colors: {
@@ -139,6 +105,8 @@ defineProps({
 });
 
 onMounted(() => {
-    initFlowbite()  
-})
+  initFlowbite();
+});
+
+const isDropdownOpen = ref(false);
 </script>

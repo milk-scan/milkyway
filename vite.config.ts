@@ -11,9 +11,9 @@ export default defineConfig({
   plugins: [
     vue(),
     cssInjectedByJsPlugin(),
-    libAssetsPlugin({
+    /* libAssetsPlugin({
       outputPath: 'assets/images'
-    })
+    }) */
   ],
   build: {
     lib: {

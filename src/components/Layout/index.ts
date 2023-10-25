@@ -1,5 +1,5 @@
+import { MilkNav, UserDropdown, UserAvatarFallbackInitials } from './Navbar'
 import SideCow from './SideCow.vue'
-import MilkNav from './Navbar/MilkNav.vue'
 import MilkDashboardLayout from './MilkDashboardLayout.vue'
 
-export { SideCow, MilkNav, MilkDashboardLayout }
+export { SideCow, MilkNav, MilkDashboardLayout, UserDropdown, UserAvatarFallbackInitials }

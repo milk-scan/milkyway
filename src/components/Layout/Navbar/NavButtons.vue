@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="grow items-center justify-between md:justify-end md:pr-16 hidden w-full md:flex md:w-auto md:order-1"
-    id="navbar-user"
-  >
-    <ul
+  <ul
       :class="
         twMerge(
           'flex flex-col p-4 md:p-0 mt-4 border border-truffle-100 rounded-lg bg-truffle-50 md:flex-row gap-y-1 md:gap-y-0 md:space-x-8 md:mt-0 md:border-0 md:bg-truffle-100',
@@ -19,8 +15,7 @@
           >{{ link.label }}</a
         >
       </li>
-    </ul>
-  </div>
+  </ul>
 </template>
 
 <script setup lang="ts">
