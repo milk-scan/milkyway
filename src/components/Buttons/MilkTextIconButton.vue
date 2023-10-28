@@ -2,10 +2,10 @@
     <button
       :id="btnId"
       :data-tooltip-target="tooltip != '' ? tooltipId() : null"
-      :class="twMerge('px-6 py-3 border rounded-md inline-flex items-center gap-2', buttonStyle, extraButtonStyle)"
+      :class="twMerge('px-6 py-3 border rounded-md inline-flex flex-nowrap items-center gap-2', buttonStyle, extraButtonStyle)"
     >
       <Icon :icon="icon" :class="twMerge(buttonIconStyle, 'w-6 h-6')" />
-      <span :class="buttonTextStyle"> {{ text }} </span>
+      <span :class="twMerge(buttonTextStyle, 'whitespace-nowrap')"> {{ text }} </span>
     </button>
     <div
       :id="tooltipId()"

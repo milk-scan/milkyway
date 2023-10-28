@@ -1,10 +1,10 @@
 <template>
-    <div class="grow flex flex-col">
+    <div class="main-section grow flex flex-col">
         <div name="content-section" class="grow flex flex-col">
-            <div class="grid px-3 grid-cols-12 sm:h-auto md:h-[20vh]"    >
+            <div class="upper-container px-3 grid grid-flow-dense grid-cols-12 sm:h-auto md:h-[20vh]"    >
                 <slot name="upper-section"></slot>
             </div>
-            <div class="grow p-3 grid grid-rows-7 grid-cols-12">
+            <div class="lower-container grow p-3 grid grid-flow-dense grid-rows-7 grid-cols-12">
                 <slot name="lower-section"></slot>  
             </div>
         </div>
