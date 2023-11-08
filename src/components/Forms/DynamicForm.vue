@@ -1,7 +1,7 @@
 
 
 <template>
-    <Form v-slot="{ handleSubmit }" @submit="onSubmit" id="zodForm">
+    <Form v-slot="{ handleSubmit }" @submit="onSubmit" :id="formId">
         <form id="zodForm" @submit="handleSubmit($event, onSubmit)">
             <div class="grid grid-cols-4 gap-6">
                 <template
@@ -33,7 +33,8 @@ import { Schema } from './constants';
 
 defineProps<{
     schema: Schema,
-    validationSchema: Object
+    validationSchema: Object,
+    formId: String,
 }>()
 
 type ValueOfFieldSchema = { [key: string]: string };
