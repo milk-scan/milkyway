@@ -1,9 +1,9 @@
 <template>
   <div class="minicards grid grid-cols-2 gap-1 pt-2">
-    <div
+    <button
       v-for="(miniCard, index) in miniCards"
       v-bind:key="index"
-      class="mini-card flex flex-col items-center gap-0.5 bg-silver-100 rounded-md p-1"
+      class="mini-card flex flex-col items-center gap-0.5 bg-silver-100 hover:bg-silver-200 rounded-md p-1"
     >
       <div class="mini-container inline-flex flex-wrap gap-1 items-end justify-center">
         <div
@@ -17,7 +17,7 @@
       <span class="grow text-center text-sm whitespace-nowrap text-silver-700">{{
         miniCard.label
       }}</span>
-    </div>
+    </button>
   </div>
 </template>
 

@@ -11,7 +11,7 @@ defineProps({
   redirect: {
     type: Object as PropType<RedirectIconButton>,
     default: () => {
-      return { title: "", label: "/" };
+      return { label: "", link: "/" };
     },
   },
 });

@@ -27,6 +27,7 @@
     "build:watch": "vue-tsc  --noEmit && vite build --watch"
   },
   "dependencies": {
+    "@ark-ui/vue": "^0.8.0",
     "flowbite": "^1.8.1",
     "moment": "^2.29.4",
     "radix-vue": "^1.0.0",

@@ -4,11 +4,11 @@
             <div class="upper-container px-3 grid grid-flow-dense grid-cols-12 sm:h-auto md:h-[20vh]"    >
                 <slot name="upper-section"></slot>
             </div>
-            <div class="lower-container grow p-3 grid grid-flow-dense grid-rows-7 grid-cols-12">
+            <div :class="twMerge('lower-container grow p-3 grid grid-rows-7 grid-cols-12', lowerSectionColor)">
                 <slot name="lower-section"></slot>  
             </div>
         </div>
-        <div name="bg-filler" :class="['absolute w-full -z-10', lowerSectionColor]" style="height: calc(100vh - 64px)">
+        <div name="bg-filler" :class="['absolute w-full h-screen -z-10', lowerSectionColor]" style="height: calc(100vh - 64px)">
             <div name="bg-filler-top" :class="['w-full', upperSectionColor]" style="height: 30vh"></div>
         </div>
     </div>
@@ -16,6 +16,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
+import { twMerge } from 'tailwind-merge';
 
 const props = defineProps({
     colors: {
