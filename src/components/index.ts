@@ -8,4 +8,4 @@ export { ChartLegends } from "./Legend"
 export { ListTag, ListVariation, MilkList, ListId, ListItem } from "./Lists"
 export { FullPage404 } from "./Pages";
 export { ComparisonIconTag } from "./Tags"
-export { HeaderGreetings, CardTitle, ChartTitle } from "./Titles"
+export { HeaderGreetings, CardTitle, ChartTitle, ChartAltTitle } from "./Titles"

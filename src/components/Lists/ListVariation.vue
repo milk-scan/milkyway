@@ -1,9 +1,9 @@
 <template>
-  <div class="inline-flex gap-2">
-    <span class="text-xl font-medium tracking-tight text-silver-950">
+  <div class="inline-flex gap-1 items-center">
+    <span class="text-sm font-medium text-silver-950">
       {{ config.label }}
     </span>
-    <comparison-icon-tag :variation="config.variation" :color="config.color" />
+    <comparison-icon-tag :variation="config.variation" :color="config.color" class="h-2 w-2"/>
   </div>
 </template>
 <script setup lang="ts">

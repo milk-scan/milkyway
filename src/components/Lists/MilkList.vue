@@ -3,9 +3,9 @@
     <button
       v-for="(row, i) in milkList"
       v-bind:key="i"
-      class="milk-list-row inline-flex flex-nowrap p-1"
+      :class="twMerge('milk-list-row inline-flex flex-nowrap justify-between items-center p-1', milkListStyle)"
     >
-      <template v-for="(rowConfig, j) in row" v-bind:key="j">
+      <template v-for="(rowConfig) in row" v-bind:key="rowConfig.index">
         <component :is="rowConfig.component" v-bind="rowConfig.props" />
       </template>
     </button>
@@ -13,9 +13,14 @@
 </template>
 
 <script setup lang="ts">
+import { twMerge } from "tailwind-merge";
 import { MilkRowConfig } from "./constants";
 
 defineProps({
+  milkListStyle: {
+    type: String,
+    default: ''
+  },
   milkList: {
     type: Array<Array<MilkRowConfig>>,
     default: () => [],

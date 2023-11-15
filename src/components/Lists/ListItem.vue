@@ -1,5 +1,5 @@
 <template>
-  <span>{{ config.label }}</span>
+  <span class="text-center text-sm text-silver-800">{{ config.label }}</span>
 </template>
 
 <script setup lang="ts">

@@ -1,7 +1,7 @@
 <template>
   <nav :class="twMerge('bg-blueberry-700', colors.primary)">
     <div
-      class="xl:max-w-screen-xl 2xl:max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto pt-4 px-2"
+      class="2xl:max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto pt-4 px-2"
     >
       <a href="/" id="logo" class="flex items-center">
         <img :src="imageUrl" class="h-8 ml-3 md:h-12" alt="Milk Scan Logo" />
