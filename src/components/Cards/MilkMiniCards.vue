@@ -1,9 +1,14 @@
 <template>
-  <div class="minicards grid grid-cols-2 gap-1 pt-2">
+  <div :class="twMerge('minicards grid grid-cols-2 gap-1 pt-2', cardStyle.containerStyle)">
     <button
       v-for="(miniCard, index) in miniCards"
       v-bind:key="index"
-      class="mini-card flex flex-col items-center gap-0.5 bg-silver-100 hover:bg-silver-200 rounded-md p-1"
+      :class="
+        twMerge(
+          'mini-card flex flex-col items-center gap-0.5 bg-silver-100 hover:bg-silver-200 rounded-md p-1',
+          cardStyle.cardStyle
+        )
+      "
     >
       <div
         class="mini-container inline-flex flex-wrap gap-1 items-end justify-center"
@@ -61,7 +66,15 @@ defineProps({
   },
   cardStyle: {
     type: Object as PropType<CardStyle>,
-    default: () => [],
+    default: () => {
+      return {
+        containerStyle: "",
+        cardStyle: "",
+        valueStyle: "",
+        unitStyle: "",
+        labelStyle: "",
+      };
+    },
   },
 });
 </script>

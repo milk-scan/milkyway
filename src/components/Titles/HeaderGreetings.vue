@@ -1,6 +1,6 @@
 <template>
   <div
-    class="greetings inline-flex gap-1 font-bold text-2xl sm:text-3xl md:text-4xl"
+    class="greetings inline-flex gap-1 font-bold text-3xl md:text-4xl"
   >
     <span :class="twMerge('text-blueberry-100 mr-0.5', colors.tertiary)">
       {{ greetings }},
@@ -15,7 +15,7 @@
       twMerge(
         'text-blueberry-200',
         colors.primary,
-        'text-md sm:text-lg md:text-xl font-normal'
+        'text-lg md:text-xl font-normal'
       )
     "
   >
@@ -25,7 +25,7 @@
         twMerge(
           'text-blueberry-100',
           colors.tertiary,
-          'text-md sm:text-lg md:text-xl font-normal'
+          'text-lg md:text-xl font-normal'
         )
       "
     >

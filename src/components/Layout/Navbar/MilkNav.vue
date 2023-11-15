@@ -1,5 +1,5 @@
 <template>
-  <nav :class="twMerge('bg-blueberry-700', colors.primary)">
+  <nav :class="twMerge('bg-blueberry-700 px-2', colors.primary)">
     <div
       class="2xl:max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto pt-4 px-2"
     >
@@ -12,7 +12,7 @@
           type="button"
           :class="
             twMerge(
-              'min-w-[180px] inline-flex items-center py-1.5 px-2.5 gap-3 rounded-lg  hover:bg-black/10 focus:bg-black/5',
+              'w-auto md:min-w-[180px] inline-flex items-center py-1.5 px-2.5 gap-3 rounded-lg  hover:bg-black/10 focus:bg-black/5',
               colors.primary
             )
           "
@@ -23,7 +23,7 @@
         >
           <span class="sr-only">Open user menu</span>
           <user-avatar-fallback-initials :profile="profile" />
-          <span :class="twMerge('text-blueberry-200', colors.secondary)">{{
+          <span :class="twMerge('text-blueberry-200 hidden md:block', colors.secondary)">{{
             profile.name
           }}</span>
           <Icon
@@ -32,7 +32,7 @@
                 ? 'majesticons:chevron-up'
                 : 'majesticons:chevron-down'
             "
-            :class="twMerge('w-5 h-5 text-blueberry-200', colors.secondary)"
+            :class="twMerge('w-5 h-5 text-blueberry-200 hidden md:block' , colors.secondary)"
           />
         </button>
 

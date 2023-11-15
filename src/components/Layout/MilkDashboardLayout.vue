@@ -3,7 +3,7 @@
     <div name="content-section" class="flex flex-col">
       <div
         :class="
-          twMerge('upper-container sm:h-auto md:h-[20vh] pb-[64px]', upperSectionColor)   
+          twMerge('upper-container h-auto pt-8 pb-[120px]', upperSectionColor)   
         "
         style="display: grid; grid-template-columns: repeat(22, 1fr)"
       >

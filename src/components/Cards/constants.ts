@@ -9,7 +9,9 @@ export type MiniCard =
   
 export type CardStyle =
 {
-  valueStyle: string
+  containerStyle: string;
+  cardStyle: string;
+  valueStyle: string;
   unitStyle: string;
   labelStyle: string
 }
