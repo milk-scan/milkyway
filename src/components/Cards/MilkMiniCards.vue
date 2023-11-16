@@ -11,7 +11,7 @@
       "
     >
       <div
-        class="mini-container inline-flex flex-wrap gap-1 items-end justify-center"
+        :class="twMerge('mini-container inline-flex flex-wrap gap-1 items-end justify-center', cardStyle.cardStyle)"
       >
         <div
           class="tiny-container inline-flex flex-wrap gap-1 justify-center items-center text-blueberry-950"
@@ -19,6 +19,7 @@
           <comparison-icon-tag
             :variation="miniCard.variation"
             :color="miniCard.color"
+            :class="twMerge('', cardStyle.iconStyle)"
           />
           <span
             :class="
@@ -73,6 +74,7 @@ defineProps({
         valueStyle: "",
         unitStyle: "",
         labelStyle: "",
+        iconStyle: ""
       };
     },
   },

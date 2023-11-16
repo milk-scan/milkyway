@@ -9,9 +9,7 @@ export type ListVariation = {
 
 export type ListTag = {} & CommonAttributes
 
-export type ListItem = {
-  label: string;
-}
+export type ListItem = {} & CommonAttributes
 
 export type MilkRowConfig = {
   component: string,

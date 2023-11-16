@@ -13,5 +13,6 @@ export type CardStyle =
   cardStyle: string;
   valueStyle: string;
   unitStyle: string;
-  labelStyle: string
+  labelStyle: string;
+  iconStyle: string
 }

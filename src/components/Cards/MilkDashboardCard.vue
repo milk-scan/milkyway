@@ -1,6 +1,6 @@
 <template>
     <div
-        class="px-[25px] pt-[25px] pb-5 flex flex-wrap flex-col gap-2.5 justify-start rounded-[20px] shadow bg-white">
+        class="p-[25px] flex flex-col gap-2.5 justify-start rounded-[20px] shadow bg-white">
         <div class="card-header inline-flex flex-wrap justify-between items-center gap-2">
             <card-title :title="header.title" class="grow"/>
             <filter-button v-if="header.filter" />
