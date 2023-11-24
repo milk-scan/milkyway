@@ -1,3 +1,15 @@
+<template>
+    <div class="relative">
+        <label :for="name" :class="[labelStyle, labelInputSize]">{{ label }}</label>
+        <input :validate-on-input="false" :name="name" :id="name" :type="type" :value="inputValue"
+            :placeholder="placeholder" :class="[inputStyle, inputSize]" @input="handleChange" @blur="handleBlur"
+            :disabled="disabled" />
+
+        <input-success-message :enable="showSuccessMessage" :message="successMessage" />
+        <input-error-message :enable="showErrorMessage" :message="errorMessage" />
+    </div>
+</template>
+
 <script setup lang="ts">
 import { toRef, computed } from 'vue';
 import { useField } from 'vee-validate';
@@ -124,15 +136,3 @@ const showErrorMessage = computed(() => {
     return (!valid && dirty) || !valid && validated
 })
 </script>
-
-<template>
-    <div class="relative">
-        <label :for="name" :class="[labelStyle, labelInputSize]">{{ label }}</label>
-        <input :validate-on-input="false" :name="name" :id="name" :type="type" :value="inputValue"
-            :placeholder="placeholder" :class="[inputStyle, inputSize]" @input="handleChange" @blur="handleBlur"
-            :disabled="disabled" />
-
-        <input-success-message :enable="showSuccessMessage" :message="successMessage" />
-        <input-error-message :enable="showErrorMessage" :message="errorMessage" />
-    </div>
-</template>
