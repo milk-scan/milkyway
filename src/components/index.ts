@@ -11,4 +11,4 @@ export { MilkLink } from "./Links"
 export { ListTag, ListVariation, MilkList, ListId, ListItem } from "./Lists"
 export { FullPage404 } from "./Pages";
 export { ComparisonIconTag } from "./Tags"
-export { HeaderGreetings, CardTitle, ChartTitle, ChartAltTitle } from "./Titles"
+export { ChartAltTitle, CardTitle, ChartTitle, HeaderGreetings, SignTitle, SignSubTitle } from "./Titles"

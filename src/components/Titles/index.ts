@@ -1,6 +1,8 @@
-import HeaderGreetings from './HeaderGreetings.vue'
+import ChartAltTitle from './ChartAltTItle.vue'
 import CardTitle from './CardTitle.vue'
 import ChartTitle from './ChartTitle.vue'
-import ChartAltTitle from './ChartAltTItle.vue'
+import HeaderGreetings from './HeaderGreetings.vue'
+import SignTitle from './SignTitle.vue'
+import SignSubTitle from './SignSubTitle.vue'
 
-export { HeaderGreetings, CardTitle, ChartTitle, ChartAltTitle }
+export { ChartAltTitle, CardTitle, ChartTitle, HeaderGreetings, SignTitle, SignSubTitle }

@@ -1,9 +1,9 @@
 <template>
-    <main class="grid grid-cols-1 grid-rows-10 md:grid-rows-1 md:grid-cols-12 bg-green-300 h-screen">
-        <div :class="twMerge('cow-container col-span-7 hidden md:flex bg-blueberry-700', style.sideStyle)">
+    <main class="grid grid-cols-1 grid-rows-10 md:grid-rows-1 md:grid-cols-12 h-screen">
+        <div :class="twMerge('cow-container col-span-7 hidden md:flex bg-blueberry-700', cowStyle.sideStyle)">
            <slot name="image">vaquinha</slot>
         </div>
-        <div :class="twMerge('main-container col-span-full md:col-span-5 bg-silver-50', style.contentStyle)">
+        <div :class="twMerge('main-container col-span-full md:col-span-5 bg-silver-50', cowStyle.contentStyle)">
             <slot name="content">login</slot>
         </div>
     </main>
@@ -19,7 +19,7 @@ type CowStyle = {
 }
 
 defineProps({
-    style:{
+    cowStyle:{
         type: Object as PropType<CowStyle>,
         default:
             {
