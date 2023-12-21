@@ -1,6 +1,6 @@
 <template>
     <div
-        class="p-[25px] flex flex-col gap-2.5 justify-start rounded-[20px] shadow bg-white">
+        :class="twMerge('p-[25px] flex flex-col gap-2.5 justify-start rounded-[20px] shadow bg-white', styling.card)">
         <div class="card-header inline-flex flex-wrap justify-between items-center gap-2">
             <card-title :title="header.title" class="grow"/>
             <filter-button v-if="header.filter" />
@@ -12,6 +12,7 @@
 </template>
 
 <script setup lang="ts">
+import { twMerge } from "tailwind-merge";
 import CardTitle from "../Titles/CardTitle.vue"
 import FilterButton from "../Buttons/FilterButton.vue"
 import RedirectIconButton from "../Buttons/RedirectIconButton.vue"
@@ -26,6 +27,11 @@ defineProps({
                 link: '/',
             }}
 
+    },
+    styling: {
+        default: {
+            card: ''
+        }
     }
 })
 </script>

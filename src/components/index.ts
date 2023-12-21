@@ -10,5 +10,6 @@ export { ChartLegends } from "./Legend"
 export { MilkLink } from "./Links"
 export { ListTag, ListVariation, MilkList, ListId, ListItem } from "./Lists"
 export { FullPage404 } from "./Pages";
+export { ProgressBar } from "./Progress";
 export { ComparisonIconTag } from "./Tags"
 export { ChartAltTitle, CardTitle, ChartTitle, HeaderGreetings, SignTitle, SignSubTitle } from "./Titles"
