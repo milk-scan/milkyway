@@ -20,8 +20,8 @@
           )
         "
       >
-        <slot></slot>
-      </label>
+      <slot></slot>
+    </label>
     </div>
   </template>
   

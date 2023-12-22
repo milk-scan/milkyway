@@ -2,7 +2,7 @@
   <span
     :class="
       twMerge(
-        'h-min min-w-[60px] inline-flex justify-center px-2.5 py-0.5 rounded-full align-middle text-center text-xs tracking-wide text-silver-50',
+        'h-min min-w-[60px] inline-flex justify-center px-2.5 py-0.5 rounded-full align-middle text-center text-xs tracking-wide whitespace-nowrap text-silver-50',
         config.color
       )
     "
