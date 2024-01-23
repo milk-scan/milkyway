@@ -62,13 +62,20 @@
     </button>
 
     <template #popper="{ hide }" v-if="miniCard.component">
-      <div class="minicards-tooltip p-3">
-        <div class="tooltip-header w-full inline-flex px-1 pt-0 pb-2 justify-between items-center border-b border-silver-100">
-          <span class="tooltip-header--title text-sm text-silver-500 tracking-wide">
+      <div class="minicards-tooltip p-3 h-dvh w-dvw md:!h-auto md:!w-auto">
+        <div
+          class="tooltip-header w-full inline-flex px-1 pt-0 pb-2 justify-between items-center border-b border-silver-100"
+        >
+          <span
+            class="tooltip-header--title text-sm text-silver-500 tracking-wide"
+          >
             {{ miniCard.popoverConfig.title }}
           </span>
           <button @click="hide()">
-            <Icon icon="ph:x" class="h-4 w-4 text-silver-400 hover:text-silver-600 active:text-blueberry-200"/>
+            <Icon
+              icon="ph:x"
+              class="h-4 w-4 text-silver-400 hover:text-silver-600 active:text-blueberry-200"
+            />
           </button>
         </div>
         <div class="tooltip-body" :style="miniCard.popoverStyle">
@@ -85,7 +92,7 @@
 <script setup lang="ts">
 import { PropType } from "vue";
 import { twMerge } from "tailwind-merge";
-import { Icon } from '@iconify/vue';
+import { Icon } from "@iconify/vue";
 import { CardStyle, MiniCard } from "./constants";
 
 defineProps({
@@ -107,4 +114,6 @@ defineProps({
     },
   },
 });
+
+
 </script>
