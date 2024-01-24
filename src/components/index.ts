@@ -5,7 +5,7 @@ export { MilkCheckBox } from "./Checkboxes"
 export { LineMiddleText } from './Divider'
 export { DynamicForm } from "./Forms";
 export { MilkInput } from "./Inputs";
-export { SideCow, MilkNav, MilkDashboardLayout, UserDropdown, UserAvatarFallbackInitials } from "./Layout";
+export { MilkDashboardLayout, MilkNav, MilkSimpleNav, SideCow, UserDropdown, UserAvatarFallbackInitials } from "./Layout";
 export { ChartLegends } from "./Legend"
 export { MilkLink } from "./Links"
 export { ListTag, ListVariation, MilkList, ListId, ListItem } from "./Lists"
