@@ -30,6 +30,7 @@
     "@ark-ui/vue": "^0.8.0",
     "flowbite": "^1.8.1",
     "moment": "^2.29.4",
+    "primevue": "^3.47.2",
     "radix-vue": "^1.0.0",
     "tailwind-merge": "^1.14.0",
     "vee-validate": "^4.11.6",
