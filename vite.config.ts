@@ -9,7 +9,11 @@ import { fileURLToPath, URL } from "url";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      script: {
+        defineModel: true
+      }
+    }),
     cssInjectedByJsPlugin(),
     /* libAssetsPlugin({
       outputPath: 'assets/images'
@@ -37,11 +41,8 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [
-      {
-        find: '@',
-        replacement: fileURLToPath(new URL('./src', import.meta.url))
-      },
-    ]
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
   },
 })
