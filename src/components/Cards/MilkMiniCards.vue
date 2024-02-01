@@ -1,7 +1,7 @@
 <template>
   <div
     :class="
-      twMerge('minicards grid grid-cols-2 gap-1 pt-2 bg-green-300', cardStyle.containerStyle)
+      twMerge('minicards grid grid-cols-2 gap-1 pt-2', cardStyle.containerStyle)
     "
   >
     <template

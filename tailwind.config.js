@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./public/index.html",
     "./index.html",
@@ -10,6 +10,29 @@ export default {
   theme: {
     extend: {
       colors: {
+        "primary-50": "rgb(var(--primary-50))",
+        "primary-100": "rgb(var(--primary-100))",
+        "primary-200": "rgb(var(--primary-200))",
+        "primary-300": "rgb(var(--primary-300))",
+        "primary-400": "rgb(var(--primary-400))",
+        "primary-500": "rgb(var(--primary-500))",
+        "primary-600": "rgb(var(--primary-600))",
+        "primary-700": "rgb(var(--primary-700))",
+        "primary-800": "rgb(var(--primary-800))",
+        "primary-900": "rgb(var(--primary-900))",
+        "primary-950": "rgb(var(--primary-950))",
+        "surface-0": "rgb(var(--surface-0))",
+        "surface-50": "rgb(var(--surface-50))",
+        "surface-100": "rgb(var(--surface-100))",
+        "surface-200": "rgb(var(--surface-200))",
+        "surface-300": "rgb(var(--surface-300))",
+        "surface-400": "rgb(var(--surface-400))",
+        "surface-500": "rgb(var(--surface-500))",
+        "surface-600": "rgb(var(--surface-600))",
+        "surface-700": "rgb(var(--surface-700))",
+        "surface-800": "rgb(var(--surface-800))",
+        "surface-900": "rgb(var(--surface-900))",
+        "surface-950": "rgb(var(--surface-950))",
         /* pra colorir esse projeto igual você colore minha vida. Te amo! */
         cranberry: {
           50: "#fbf4f8",
@@ -22,7 +45,7 @@ export default {
           700: "#a43260",
           800: "#882c50",
           900: "#722945",
-          950: "#441325"
+          950: "#441325",
         },
         tropical: {
           50: "#fdfce9",
@@ -35,7 +58,7 @@ export default {
           700: "#9d5e0b",
           800: "#824a11",
           900: "#6e3d15",
-          950: "#401f08"
+          950: "#401f08",
         },
         macha: {
           50: "#f2f9ec",
@@ -48,7 +71,7 @@ export default {
           700: "#3c6328",
           800: "#335024",
           900: "#2d4522",
-          950: "#15250e"
+          950: "#15250e",
         },
         silver: {
           50: "#f6f7f9",
@@ -61,7 +84,7 @@ export default {
           700: "#444e60",
           800: "#3b4251",
           900: "#353a45",
-          950: "#23272e"
+          950: "#23272e",
         },
         blueberry: {
           50: "#f4f6fb",
@@ -74,7 +97,7 @@ export default {
           700: "#2b4979",
           800: "#273f65",
           900: "#253755",
-          950: "#192438"
+          950: "#192438",
         },
         truffle: {
           50: "#f7f7f7",
@@ -87,23 +110,23 @@ export default {
           700: "#7b7b7b",
           800: "#676767",
           900: "#545454",
-          950: "#363636"
+          950: "#363636",
         },
         papaya: {
           50: "#fdf6ef",
           100: "#faeada",
-          "200": "#f4d2b4",
-          "300": "#edb484",
-          "400": "#e38244",
-          "500": "#df6d30",
-          "600": "#d15625",
-          "700": "#ad4221",
-          "800": "#8a3622",
-          "900": "#702e1e",
-          "950": "#3c150e"
-        }
-      }
+          200: "#f4d2b4",
+          300: "#edb484",
+          400: "#e38244",
+          500: "#df6d30",
+          600: "#d15625",
+          700: "#ad4221",
+          800: "#8a3622",
+          900: "#702e1e",
+          950: "#3c150e",
+        },
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
-}; 
+};
