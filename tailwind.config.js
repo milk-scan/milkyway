@@ -11,6 +11,7 @@ export default {
     "./public/index.html",
     "./index.html",
     "./src/components/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/presets/**/*.{vue,js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {

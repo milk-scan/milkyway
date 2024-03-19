@@ -13,3 +13,4 @@ export { FullPage404 } from "./Pages";
 export { ProgressBar } from "./Progress";
 export { ComparisonIconTag } from "./Tags"
 export { ChartAltTitle, CardTitle, ChartTitle, HeaderGreetings, SignTitle, SignSubTitle } from "./Titles"
+export { ResponsiveModal } from './Dialog';
