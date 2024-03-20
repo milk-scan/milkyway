@@ -2,7 +2,7 @@
   <Dialog
     v-model:visible="visible"
     modal
-    :style="{ width: '50vw' }"
+    :style="{ width: '60vw' }"
     :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
     v-bind="$attrs"
   >

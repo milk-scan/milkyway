@@ -6,5 +6,6 @@ import MilkTextButton from './MilkTextButton.vue'
 import MilkTextIconButton from './MilkTextIconButton.vue'
 import RedirectIconButton from './RedirectIconButton.vue'
 import SmallTextIconButton from './SmallTextIconButton.vue'
+import MilkRadioButtonGroup from './MilkRadioButtonGroup.vue'
 
-export { GoogleAuthButton, LoadingButton, MilkTextButton, MilkIconButton, MilkTextIconButton, FilterButton,  RedirectIconButton, SmallTextIconButton }
+export { GoogleAuthButton, LoadingButton, MilkTextButton, MilkIconButton, MilkTextIconButton, FilterButton,  RedirectIconButton, SmallTextIconButton, MilkRadioButtonGroup }
