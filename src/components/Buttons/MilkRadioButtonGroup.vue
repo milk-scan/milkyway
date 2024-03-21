@@ -2,13 +2,13 @@
   <div class="card flex justify-content-center">
     <div class="flex flex-column flex-col gap-3">
       <div
-        v-for="decision, i in decisions"
+        v-for="(decision, i) in decisions"
         :key="decision.key"
         class="flex align-items-center"
       >
         <RadioButton
           v-model="selectedDefault"
-          :inputId="decision.key ? decision.key + i : undefined" 
+          :inputId="decision.key ? decision.key + i : undefined"
           :value="decision.key"
           v-bind="$attrs"
         />
@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import RadioButton from "primevue/radiobutton";
-import { PropType, ref, toRef } from "vue";
+import { PropType } from "vue";
 
 type RadioDecision = {
   key: string | undefined;
@@ -31,14 +31,13 @@ defineOptions({
   inheritAttrs: false,
 });
 
-const props = defineProps({
+defineProps({
   decisions: {
     type: Array as PropType<Array<RadioDecision>>,
     default: () => <RadioDecision[]>[],
   },
-  selectedDefault: String
+  // selectedDefault: String
 });
 
-const selectedDefault = toRef(props, 'selectedDefault');
-
+const selectedDefault = defineModel({ default: false });
 </script>

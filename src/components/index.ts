@@ -1,4 +1,4 @@
-export { GoogleAuthButton, LoadingButton, MilkTextButton, MilkIconButton, MilkTextIconButton, FilterButton, RedirectIconButton, SmallTextIconButton, MilkRadioButtonGroup } from "./Buttons";
+export { GoogleAuthButton, LoadingButton, MilkTextButton, MilkIconButton, MilkTextIconButton, FilterButton, RedirectIconButton, SmallTextIconButton, MilkRadioButtonGroup, MilkButton } from "./Buttons";
 export { MilkDashboardCard, MilkMiniCards } from "./Cards";
 export { TaskCalendar } from "./Calendars"
 export { MilkCheckBox } from "./Checkboxes"
