@@ -2,8 +2,8 @@
   <Dialog
     v-model:visible="visible"
     modal
-    :style="{ width: '60vw' }"
-    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
+
+    :breakpoints="{ '1199px': '75vw', '575px': 'w-full' }"
     v-bind="$attrs"
   >
     <p class="m-0">
@@ -13,14 +13,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 import Dialog from "primevue/dialog";
 
-const visible = ref(false);
+const visible = defineModel()
 
 defineOptions({
   inheritAttrs: false,
 });
-
-defineExpose({ visible });
 </script>

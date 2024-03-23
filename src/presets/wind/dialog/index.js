@@ -146,7 +146,7 @@ export default {
             // Font
             'text-sm',
             // Spacing
-            'px-6',
+            // 'px-6',
             'pb-3',
             'pt-0',
 
@@ -162,7 +162,7 @@ export default {
             'text-surface-600 dark:text-surface-0/70',
 
             // Misc
-            'overflow-y-auto'
+            // 'overflow-y-auto'
         ]
     }),
     footer: {

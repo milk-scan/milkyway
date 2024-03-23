@@ -32,7 +32,7 @@ export default {
             'flex items-center',
 
             // Spacing
-            'py-4 px-3',
+            'py-2 px-2',
             '-mb-[1px]',
 
             // Shape

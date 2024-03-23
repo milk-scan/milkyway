@@ -5,7 +5,7 @@ export { MilkCheckBox } from "./Checkboxes"
 export { LineMiddleText } from './Divider'
 export { DynamicForm } from "./Forms";
 export { MilkInput } from "./Inputs";
-export { MilkDashboardLayout, MilkNav, MilkSimpleNav, SideCow, UserDropdown, UserAvatarFallbackInitials } from "./Layout";
+export { MilkDashboardLayout, MilkNav, MilkSimpleNav, MilkBottomNavigation, SideCow, UserDropdown, UserAvatarFallbackInitials } from "./Layout";
 export { ChartLegends } from "./Legend"
 export { MilkLink } from "./Links"
 export { ListTag, ListVariation, MilkList, ListId, ListItem } from "./Lists"
@@ -15,3 +15,4 @@ export { ComparisonIconTag } from "./Tags"
 export { ChartAltTitle, CardTitle, ChartTitle, HeaderGreetings, SignTitle, SignSubTitle } from "./Titles"
 export { ResponsiveModal } from './Dialog';
 export { MilkDropdown } from './Dropdowns';
+export { MilkTabs } from './Tabs';
