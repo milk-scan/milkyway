@@ -1,4 +1,4 @@
-export { GoogleAuthButton, LoadingButton, MilkTextButton, MilkIconButton, MilkTextIconButton, FilterButton, RedirectIconButton, SmallTextIconButton, MilkRadioButtonGroup, MilkButton } from "./Buttons";
+export { GoogleAuthButton, LoadingButton, MilkTextButton, MilkIconButton, MilkTextIconButton, FilterButton, RedirectIconButton, SmallTextIconButton, MilkRadioButtonGroup, MilkButton, ToggleButton } from "./Buttons";
 export { MilkDashboardCard, MilkMiniCards } from "./Cards";
 export { TaskCalendar } from "./Calendars"
 export { MilkCheckBox } from "./Checkboxes"
@@ -16,3 +16,4 @@ export { ChartAltTitle, CardTitle, ChartTitle, HeaderGreetings, SignTitle, SignS
 export { ResponsiveModal } from './Dialog';
 export { MilkDropdown } from './Dropdowns';
 export { MilkTabs } from './Tabs';
+export { MilkSwirl } from './Loading';

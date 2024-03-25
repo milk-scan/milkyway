@@ -13,7 +13,7 @@ export default {
             'inline-flex items-center align-bottom text-center',
 
             // Spacing
-            'px-2.5 py-1.5',
+            'select-toggle-option-button px-2.5 py-1.5',
 
             // Shape
             'ring-1 ring-surface-200 dark:ring-surface-700',

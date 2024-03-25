@@ -1,5 +1,5 @@
 <template>
-  <TabView v-bind="$attrs">
+  <TabView v-bind="$attrs" v-model:activeIndex="active">
     <TabPanel
       v-for="tab in tabs"
       :key="tab.title"
@@ -19,7 +19,7 @@ import { Component, PropType } from "vue";
 interface Tab {
   title: string;
   content: string | Component;
-  props: TabPanelProps;
+  props?: TabPanelProps;
 }
 
 defineProps({
@@ -32,4 +32,6 @@ defineProps({
 defineOptions({
   inheritAttrs: false,
 });
+
+const active = defineModel<number>()
 </script>

@@ -2,7 +2,7 @@ export default {
     root: ({ props, context }) => ({
         class: [
             // Alignments
-            'items-center inline-flex text-center align-bottom justify-center',
+            'toggle-option-button items-center inline-flex text-center align-bottom justify-center',
 
             // Sizes & Spacing
             'px-2.5 py-1.5',
