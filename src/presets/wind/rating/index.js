@@ -20,7 +20,7 @@ export default {
 
             //State
             {
-                'outline-none ring-2 ring-primary-500 dark:ring-primary-400': context.focused
+                'outline-none ring-2 ring-blueberry-500 dark:ring-blueberry-400': context.focused
             },
 
             // Misc
@@ -43,7 +43,7 @@ export default {
 
             // State
             {
-                'outline-none ring-2 ring-primary-500 dark:ring-primary-400': context.focused
+                'outline-none ring-2 ring-blueberry-500 dark:ring-blueberry-400': context.focused
             },
 
             // Misc
@@ -62,7 +62,7 @@ export default {
             'text-surface-700 dark:text-surface-0/70',
 
             // State
-            { 'hover:text-primary-500 dark:hover:text-primary-400': !props.readonly },
+            { 'hover:text-blueberry-500 dark:hover:text-blueberry-400': !props.readonly },
 
             // Transition
             'transition duration-200 ease-in'
@@ -74,7 +74,7 @@ export default {
             'w-5 h-5',
 
             // Color
-            'text-primary-500 dark:text-primary-400',
+            'text-blueberry-500 dark:text-blueberry-400',
 
             // Transition
             'transition duration-200 ease-in'

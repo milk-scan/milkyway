@@ -30,13 +30,13 @@ export default {
     response: {
         class: [
             // Color
-            'text-primary-400'
+            'text-blueberry-400'
         ]
     },
     command: {
         class: [
             // Color
-            'text-primary-400'
+            'text-blueberry-400'
         ]
     },
     commandtext: {

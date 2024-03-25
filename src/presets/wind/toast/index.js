@@ -72,7 +72,7 @@ export default {
             // States
             'hover:bg-surface-100 dark:hover:bg-surface-700',
             'outline-none focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
 
             // Misc
             'overflow-hidden'

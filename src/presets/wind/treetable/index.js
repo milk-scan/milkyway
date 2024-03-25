@@ -125,7 +125,7 @@ export default {
             {
                 'hover:bg-surface-300/20 hover:text-surface-600': context.selectable && !context.selected
             },
-            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 ring-inset dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-blueberry-500 ring-inset dark:focus:ring-blueberry-400',
 
             // Transition
             { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover }
@@ -154,12 +154,12 @@ export default {
             context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
 
             // Color
-            (props.sortable === '' || props.sortable) && context.sorted ? 'text-primary-500' : 'bg-surface-0 text-surface-700',
-            (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80 dark:bg-surface-800',
+            (props.sortable === '' || props.sortable) && context.sorted ? 'text-blueberry-500' : 'bg-surface-0 text-surface-700',
+            (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-blueberry-400' : 'dark:text-white/80 dark:bg-surface-800',
             'border-surface-200 dark:border-surface-700 ',
 
             // States
-            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400',
 
             // Transition
             { 'transition duration-200': props.sortable === '' || props.sortable },
@@ -194,12 +194,12 @@ export default {
                 context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
 
                 // Color
-                (props.sortable === '' || props.sortable) && context.sorted ? 'text-primary-500' : 'bg-surface-0 text-surface-700',
-                (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80 dark:bg-surface-800',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'text-blueberry-500' : 'bg-surface-0 text-surface-700',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-blueberry-400' : 'dark:text-white/80 dark:bg-surface-800',
                 'border-surface-200 dark:border-surface-700 ',
 
                 // States
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400',
 
                 // Transition
                 { 'transition duration-200': props.sortable === '' || props.sortable },
@@ -269,7 +269,7 @@ export default {
                 // States
                 'hover:bg-surface-50 dark:hover:bg-surface-700',
                 'focus-visible:outline-none focus-visible:outline-offset-0',
-                'focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+                'focus-visible:ring-2 focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400',
 
                 // Transition
                 'transition duration-200',
@@ -280,7 +280,7 @@ export default {
             ]
         },
         sorticon: ({ context }) => ({
-            class: ['ml-2 inline-block', context.sorted ? 'fill-primary-700 dark:fill-white/80' : 'fill-surface-700 dark:fill-white/70']
+            class: ['ml-2 inline-block', context.sorted ? 'fill-blueberry-700 dark:fill-white/80' : 'fill-surface-700 dark:fill-white/70']
         }),
         sortbadge: {
             class: [
@@ -297,8 +297,8 @@ export default {
                 'ml-2',
 
                 // Color
-                'text-primary-700 dark:text-white',
-                'bg-primary-50 dark:bg-primary-400/30'
+                'text-blueberry-700 dark:text-white',
+                'bg-blueberry-50 dark:bg-blueberry-400/30'
             ]
         },
         columnresizer: {
@@ -353,13 +353,13 @@ export default {
                 'text-surface-600',
                 {
                     'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
-                    'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
+                    'border-blueberry-500 bg-blueberry-500 dark:border-blueberry-400 dark:bg-blueberry-400': context.checked
                 },
 
                 // States
                 'focus:outline-none focus:outline-offset-0',
                 {
-                    'ring ring-primary-400/50 dark:ring-primary-300/50': context.focused
+                    'ring ring-blueberry-400/50 dark:ring-blueberry-300/50': context.focused
                 },
 
                 // Transition
@@ -390,6 +390,6 @@ export default {
         }
     },
     resizehelper: {
-        class: 'absolute hidden w-[2px] z-20 bg-primary-500 dark:bg-primary-400'
+        class: 'absolute hidden w-[2px] z-20 bg-blueberry-500 dark:bg-blueberry-400'
     }
 };

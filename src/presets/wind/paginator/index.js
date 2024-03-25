@@ -41,7 +41,7 @@ export default {
             // State
             {
                 'hover:border-surface-300 dark:hover:border-surface-200/30': !context.disabled,
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400': !context.disabled
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400': !context.disabled
             },
 
             // Transition
@@ -74,7 +74,7 @@ export default {
             // State
             {
                 'hover:border-surface-300 dark:hover:border-surface-200/30': !context.disabled,
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400': !context.disabled
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400': !context.disabled
             },
 
             // Transition
@@ -107,7 +107,7 @@ export default {
             // State
             {
                 'hover:border-surface-300 dark:hover:border-surface-200/30': !context.disabled,
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400': !context.disabled
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400': !context.disabled
             },
 
             // Transition
@@ -140,7 +140,7 @@ export default {
             // State
             {
                 'hover:border-surface-300 dark:hover:border-surface-200/30': !context.disabled,
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400': !context.disabled
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400': !context.disabled
             },
 
             // Transition
@@ -170,13 +170,13 @@ export default {
             // Color
             {
                 'text-surface-500 dark:text-white/60 border-transparent': !context.active,
-                'border-primary-500 dark:border-primary-400 text-primary-500 dark:text-surface-0': context.active
+                'border-blueberry-500 dark:border-blueberry-400 text-blueberry-500 dark:text-surface-0': context.active
             },
 
             // State
             {
                 'hover:border-surface-300 dark:hover:border-surface-200/30': !context.disabled && !context.active,
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400': !context.disabled
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-blueberry-500 dark:focus-visible:ring-blueberry-400': !context.disabled
             },
 
             // Transition
@@ -209,7 +209,7 @@ export default {
                 'duration-200',
 
                 // States
-                { 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 dark:focus-visible:ring-primary-500': !state.focused },
+                { 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blueberry-600 dark:focus-visible:ring-blueberry-500': !state.focused },
 
                 // Misc
                 'cursor-pointer',
@@ -330,11 +330,11 @@ export default {
 
                 // Color
                 { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-                { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
+                { 'bg-blueberry-500 dark:bg-blueberry-400 text-white dark:text-surface-700': context.focused && context.selected },
                 { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
                 //States
-                'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+                'hover:bg-blueberry-500 dark:hover:bg-blueberry-400 hover:text-white dark:hover:text-surface-700',
 
                 // Misc
                 'cursor-pointer',
@@ -378,9 +378,9 @@ export default {
                     'duration-200',
 
                     // States
-                    'hover:border-primary-500 dark:hover:border-primary-400',
+                    'hover:border-blueberry-500 dark:hover:border-blueberry-400',
                     'focus-visible:outline-none focus-visible:shadow-none',
-                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-600 dark:focus-visible:ring-primary-500',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blueberry-600 dark:focus-visible:ring-blueberry-500',
                     // Misc
                     'cursor-pointer',
                     'overflow-hidden overflow-ellipsis',
@@ -412,7 +412,7 @@ export default {
                 'duration-200',
 
                 // States
-                { 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 dark:focus-visible:ring-primary-500': !state.focused },
+                { 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blueberry-600 dark:focus-visible:ring-blueberry-500': !state.focused },
 
                 // Misc
                 'cursor-pointer',
@@ -530,11 +530,11 @@ export default {
 
                 // Color
                 { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-                { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
+                { 'bg-blueberry-500 dark:bg-blueberry-400 text-white dark:text-surface-700': context.focused && context.selected },
                 { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
                 //States
-                'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+                'hover:bg-blueberry-500 dark:hover:bg-blueberry-400 hover:text-white dark:hover:text-surface-700',
 
                 // Misc
                 'cursor-pointer',

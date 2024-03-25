@@ -36,7 +36,7 @@ export default {
             'rounded-lg',
 
             // Colors
-            'bg-primary-500 dark:bg-primary-400'
+            'bg-blueberry-500 dark:bg-blueberry-400'
         ]
     }),
     handle: ({ props }) => ({
@@ -57,7 +57,7 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'ring-blueberry-500 dark:ring-blueberry-400',
 
             // Transitions
             'transition duration-200',
@@ -85,7 +85,7 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'ring-blueberry-500 dark:ring-blueberry-400',
 
             // Transitions
             'transition duration-200',
@@ -113,7 +113,7 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'ring-blueberry-500 dark:ring-blueberry-400',
 
             // Transitions
             'transition duration-200',

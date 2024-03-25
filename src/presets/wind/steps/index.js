@@ -36,7 +36,7 @@ export default {
             // After
             'after:border-t-2',
             { 'after:border-surface-200 after:dark:border-surface-700': state.d_activeStep <= context.index },
-            { 'after:border-primary-500 after:dark:border-primary-400': state.d_activeStep > context.index },
+            { 'after:border-blueberry-500 after:dark:border-blueberry-400': state.d_activeStep > context.index },
             'after:w-full',
             'after:absolute',
             'after:top-1/2',
@@ -71,13 +71,13 @@ export default {
                 'bg-surface-0 dark:bg-surface-800': state.d_activeStep <= context.index
             },
             {
-                'border-primary-500 dark:border-primary-400': context.active,
-                'text-primary-500 dark:text-primary-400': context.active
+                'border-blueberry-500 dark:border-blueberry-400': context.active,
+                'text-blueberry-500 dark:text-blueberry-400': context.active
             },
             {
-                'bg-primary-500 dark:bg-primary-400': state.d_activeStep > context.index,
+                'bg-blueberry-500 dark:bg-blueberry-400': state.d_activeStep > context.index,
                 'text-surface-0 dark:text-surface-900': state.d_activeStep > context.index,
-                'border-primary-500 dark:border-primary-400': state.d_activeStep > context.index
+                'border-blueberry-500 dark:border-blueberry-400': state.d_activeStep > context.index
             },
 
             // States

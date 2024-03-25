@@ -35,7 +35,7 @@ export default {
             // Colors
             {
                 'text-surface-700 dark:text-surface-0': !context.focused,
-                'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
+                'bg-surface-100 text-blueberry-500 dark:bg-surface-300/10 dark:text-blueberry-400': context.focused
             },
 
             // Transitions
@@ -43,7 +43,7 @@ export default {
             'duration-200',
 
             // States
-            'hover:text-primary-600 dark:hover:text-primary-400',
+            'hover:text-blueberry-600 dark:hover:text-blueberry-400',
             'hover:bg-surface-100 dark:hover:bg-surface-400/10'
         ]
     }),

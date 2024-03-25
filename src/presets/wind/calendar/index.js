@@ -37,7 +37,7 @@ export default {
             'duration-200',
 
             // States
-            'outline-none focus:ring-primary-500 dark:focus:ring-primary-400'
+            'outline-none focus:ring-blueberry-500 dark:focus:ring-blueberry-400'
         ]
     }),
     inputicon: {
@@ -65,7 +65,7 @@ export default {
                 // States
                 'hover:bg-surface-200 dark:hover:bg-surface-700',
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
-                'focus:ring-primary-500 dark:focus:ring-primary-400'
+                'focus:ring-blueberry-500 dark:focus:ring-blueberry-400'
             ]
         }
     },
@@ -166,7 +166,7 @@ export default {
             'm-0 mr-2',
 
             // States
-            'hover:text-primary-500 dark:hover:text-primary-400',
+            'hover:text-blueberry-500 dark:hover:text-blueberry-400',
 
             // Misc
             'cursor-pointer'
@@ -188,7 +188,7 @@ export default {
             'm-0',
 
             // States
-            'hover:text-primary-500 dark:hover:text-primary-400',
+            'hover:text-blueberry-500 dark:hover:text-blueberry-400',
 
             // Misc
             'cursor-pointer'
@@ -267,11 +267,11 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-500  dark:text-primary-400': context.selected && !context.disabled
+                'text-blueberry-500  dark:text-blueberry-400': context.selected && !context.disabled
             },
 
             // States
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-blueberry-400/50 dark:focus:ring-blueberry-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-800/80': !context.disabled
             },
@@ -295,12 +295,12 @@ export default {
             {
                 'text-surface-0 bg-surface-900 dark:text-surface-900 dark:bg-surface-0': context.date.today && !context.selected && !context.disabled,
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled && !context.date.today,
-                'text-primary-500 dark:text-primary-400': context.selected && !context.disabled && !context.date.today,
-                'text-primary-200 dark:text-primary-600 bg-surface-900 dark:bg-surface-0': context.selected && !context.disabled && context.date.today
+                'text-blueberry-500 dark:text-blueberry-400': context.selected && !context.disabled && !context.date.today,
+                'text-blueberry-200 dark:text-blueberry-600 bg-surface-900 dark:bg-surface-0': context.selected && !context.disabled && context.date.today
             },
 
             // States
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.disabled,
                 'hover:bg-surface-700 dark:hover:bg-surface-200': !context.disabled && context.date.today
@@ -335,11 +335,11 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-500 dark:text-primary-400': context.selected && !context.disabled
+                'text-blueberry-500 dark:text-blueberry-400': context.selected && !context.disabled
             },
 
             // States
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
             'hover:bg-surface-100 dark:hover:bg-surface-600/80',
 
             // Misc
@@ -369,11 +369,11 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-500 dark:text-primary-400': context.selected && !context.disabled
+                'text-blueberry-500 dark:text-blueberry-400': context.selected && !context.disabled
             },
 
             // States
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
             'hover:bg-surface-100 dark:hover:bg-surface-600/80',
 
             // Misc
@@ -536,15 +536,15 @@ export default {
 
                 // Colors
                 'bg-transparent border-transparent',
-                'text-primary-500 dark:text-primary-400',
+                'text-blueberry-500 dark:text-blueberry-400',
 
                 // Transitions
                 'transition-colors duration-200 ease-in-out',
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-2 ring-inset',
-                'focus:ring-primary-500 dark:focus:ring-primary-400',
-                'hover:bg-primary-300/20',
+                'focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
+                'hover:bg-blueberry-300/20',
 
                 // Misc
                 'cursor-pointer'
@@ -565,15 +565,15 @@ export default {
 
                 // Colors
                 'bg-transparent border-transparent',
-                'text-primary-500 dark:text-primary-400',
+                'text-blueberry-500 dark:text-blueberry-400',
 
                 // Transitions
                 'transition-colors duration-200 ease-in-out',
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-2 ring-inset',
-                'focus:ring-primary-500 dark:focus:ring-primary-400',
-                'hover:bg-primary-300/20',
+                'focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
+                'hover:bg-blueberry-300/20',
 
                 // Misc
                 'cursor-pointer'

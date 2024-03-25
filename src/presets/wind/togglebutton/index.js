@@ -22,7 +22,7 @@ export default {
             // States
             'hover:bg-surface-200 dark:hover:bg-surface-600/80',
             {
-                'outline-none outline-offset-0 ring-2 ring-inset ring-primary-500 dark:ring-primary-400': context.focused && !props.disabled
+                'outline-none outline-offset-0 ring-2 ring-inset ring-blueberry-500 dark:ring-blueberry-400': context.focused && !props.disabled
             },
 
             // Transitions

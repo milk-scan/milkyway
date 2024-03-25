@@ -122,12 +122,12 @@ export default {
             'transition duration-200',
 
             // Focus Styles
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-blueberry-400/50 dark:focus:ring-blueberry-300/50',
 
             // Color & Background
             {
                 'bg-surface-200 hover:bg-surface-300 dark:bg-surface-700 dark:hover:bg-surface-600': !context.highlighted,
-                'bg-primary-500 hover:bg-primary-600': context.highlighted
+                'bg-blueberry-500 hover:bg-blueberry-600': context.highlighted
             }
         ]
     })

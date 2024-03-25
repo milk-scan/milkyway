@@ -23,13 +23,13 @@ export default {
             'text-surface-600',
             {
                 'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': props.modelValue == null,
-                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': props.modelValue !== null
+                'border-blueberry-500 bg-blueberry-500 dark:border-blueberry-400 dark:bg-blueberry-400': props.modelValue !== null
             },
 
             // States
             'focus:outline-none focus:outline-offset-0',
             {
-                'ring-2 ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused,
+                'ring-2 ring-blueberry-500 dark:ring-blueberry-400': !props.disabled && context.focused,
                 'cursor-default opacity-60': props.disabled
             },
 

@@ -193,7 +193,7 @@ export default {
             'hover:text-surface-600 dark:hover:text-white/60',
             'hover:bg-surface-50 dark:hover:bg-surface-800/80',
             'focus:outline-none focus:outline-offset-0',
-            'focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:ring-2 focus:ring-inset focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
 
             // Transitions
             'transition duration-200 ease-in-out',

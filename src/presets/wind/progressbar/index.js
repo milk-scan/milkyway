@@ -20,7 +20,7 @@ export default {
             { 'absolute flex items-center justify-center': props.mode !== 'indeterminate' },
 
             // Colors
-            'bg-primary-500 dark:bg-primary-400',
+            'bg-blueberry-500 dark:bg-blueberry-400',
 
             // Spacing & Sizing
             'm-0',

@@ -26,8 +26,8 @@ export default {
             'border border-surface-300 dark:border-surface-700',
 
             // States
-            'hover:border-primary-500 dark:hover:border-primary-400',
-            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'hover:border-blueberry-500 dark:hover:border-blueberry-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
 
             // Transition
             'transition-colors duration-200',

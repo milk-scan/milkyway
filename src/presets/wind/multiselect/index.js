@@ -14,7 +14,7 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
 
             // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-blueberry-500 dark:ring-blueberry-400': state.focused },
 
             // Misc
             'cursor-default',
@@ -171,10 +171,10 @@ export default {
             'text-surface-600',
             {
                 'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context?.selected,
-                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context?.selected
+                'border-blueberry-500 bg-blueberry-500 dark:border-blueberry-400 dark:bg-blueberry-400': context?.selected
             },
 
-            { 'outline-offset-0 ring-1 ring-primary-500 dark:ring-primary-400': state.focused }
+            { 'outline-offset-0 ring-1 ring-blueberry-500 dark:ring-blueberry-400': state.focused }
         ]
     }),
     headercheckboxicon: {
@@ -221,7 +221,7 @@ export default {
             'hover:text-surface-700 dark:hover:text-white/80',
             'hover:bg-surface-100 dark:hover:bg-surface-800/80',
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:ring-blueberry-500 dark:focus:ring-blueberry-400',
 
             // Misc
             'overflow-hidden'
@@ -273,11 +273,11 @@ export default {
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
             { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
-            { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
+            { 'bg-blueberry-500 dark:bg-blueberry-400 text-white dark:text-surface-700': context.focused && context.selected },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
             //States
-            'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+            'hover:bg-blueberry-500 dark:hover:bg-blueberry-400 hover:text-white dark:hover:text-surface-700',
 
             // Misc
             'cursor-pointer',
@@ -324,10 +324,10 @@ export default {
             'text-surface-600',
             {
                 'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context?.selected,
-                'border-primary-400 bg-primary-500 dark:border-primary-300 dark:bg-primary-400': context?.selected
+                'border-blueberry-400 bg-blueberry-500 dark:border-blueberry-300 dark:bg-blueberry-400': context?.selected
             },
 
-            'focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400'
+            'focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-blueberry-500 dark:focus:ring-blueberry-400'
         ]
     }),
     checkboxicon: {
@@ -394,7 +394,7 @@ export default {
 
             // States
             'focus:ring-2 focus:ring-inset focus:outline-none focus:outline-offset-0',
-            'focus:ring-primary-600 dark:focus:ring-primary-500',
+            'focus:ring-blueberry-600 dark:focus:ring-blueberry-500',
 
             // Misc
             'appearance-none'

@@ -77,12 +77,12 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-primary-500 dark:text-primary-400',
+                'text-blueberry-500 dark:text-blueberry-400',
 
                 // States
-                'hover:bg-primary-300/20',
+                'hover:bg-blueberry-300/20',
                 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset',
-                'focus:ring-primary-500 dark:focus:ring-primary-400'
+                'focus:ring-blueberry-500 dark:focus:ring-blueberry-400'
             ]
         }
     },
@@ -103,13 +103,13 @@ export default {
 
                 // Color
                 'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'ring-1 ring-primary-500 dark:ring-primary-400',
+                'bg-blueberry-500 dark:bg-blueberry-400',
+                'ring-1 ring-blueberry-500 dark:ring-blueberry-400',
 
                 // States
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-blueberry-600 dark:hover:bg-blueberry-300 hover:border-blueberry-600 dark:hover:border-blueberry-300',
                 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-offset-current',
-                'focus:ring-primary-500 dark:focus:ring-primary-400'
+                'focus:ring-blueberry-500 dark:focus:ring-blueberry-400'
             ]
         }
     },

@@ -12,7 +12,7 @@ export default {
             'h-5 w-9',
 
             // States
-            { 'outline-none outline-offset-0 ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 dark:ring-primary-400': state.focused },
+            { 'outline-none outline-offset-0 ring-2 ring-blueberry-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 dark:ring-blueberry-400': state.focused },
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
             }
@@ -40,7 +40,7 @@ export default {
             'border-2 border-transparent',
             {
                 'bg-surface-200 dark:bg-surface-700': !props.modelValue,
-                'bg-primary-500 dark:bg-primary-400': props.modelValue
+                'bg-blueberry-500 dark:bg-blueberry-400': props.modelValue
             },
 
             // States
