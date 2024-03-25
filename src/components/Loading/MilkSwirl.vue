@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import ProgressSpinner from "primevue/progressspinner";
+// import ProgressSpinner from "primevue/progressspinner";
 
 defineOptions({
   inheritAttrs: false,

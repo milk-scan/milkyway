@@ -17,3 +17,4 @@ export { ResponsiveModal } from './Dialog';
 export { MilkDropdown } from './Dropdowns';
 export { MilkTabs } from './Tabs';
 export { MilkSwirl } from './Loading';
+export { MilkGroupAccordion } from './Accordions'
