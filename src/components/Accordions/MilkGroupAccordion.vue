@@ -1,20 +1,20 @@
 <template>
-  <Accordion :activeIndex="0">
-    <AccordionTab v-for="tab in accordionTabs">
+  <Accordion :activeIndex="0" v-bind="$attrs">
+    <AccordionTab v-for="{ title, badge, tabProps, contentProps, content} in accordionTabs" v-bind="tabProps">
       <template #header>
         <span class="flex align-items-center gap-2 w-full">
-          <span class="font-bold white-space-nowrap">{{ tab.title }} </span>
-          <Badge :value="tab.badge" class="ml-auto mr-2"/>
+          <span class="font-bold white-space-nowrap">{{ title }} </span>
+          <Badge :value="badge" class="ml-auto mr-2"/>
         </span>
       </template>
-     <component :is="tab.content" v-bind="tab.contentProps" ></component>
+     <component :is="content" v-bind="contentProps" ></component>
     </AccordionTab>
   </Accordion>
 </template>
 
 <script lang="ts" setup>
 import Accordion from "primevue/accordion";
-import AccordionTab from "primevue/accordiontab";
+import AccordionTab, { AccordionTabProps } from "primevue/accordiontab";
 import Badge from "primevue/badge";
 import { Component, PropType } from "vue";
 
@@ -23,6 +23,7 @@ interface AccordionTabInterface {
   badge: string | number;
   content: Component;
   contentProps: Object
+  tabProps: AccordionTabProps
 }
 
 defineProps({
@@ -31,4 +32,8 @@ defineProps({
     default: () => <AccordionTabInterface[]>[],
   },
 });
+
+defineOptions({
+    inheritAttrs: true
+})
 </script>

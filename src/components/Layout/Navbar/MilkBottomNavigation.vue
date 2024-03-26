@@ -13,7 +13,7 @@
           <a v-ripple :href="href" v-bind="props.action" @click="navigate">
             <div class="menu-item-wrapper flex flex-col gap-y-1">
               <Icon :icon="item.icon ? item.icon : ''" class="w-5 h-auto" />
-              <span v-bind="props.label" class="text-sm">{{ item.label }}</span>
+              <span v-bind="props.label" class="text-xs">{{ item.label }}</span>
             </div>
           </a>
         </router-link>
@@ -29,7 +29,7 @@
             class="menu-item-wrapper flex flex-col gap-y-1 justify-center items-center"
           >
             <Icon :icon="item.icon ? item.icon : ''" class="w-5 h-auto" />
-            <span v-bind="props.label" class="text-sm">{{ item.label }}</span>
+            <span v-bind="props.label" class="text-xs">{{ item.label }}</span>
           </div>
         </a>
       </template>

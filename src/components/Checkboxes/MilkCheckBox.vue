@@ -3,7 +3,7 @@
       <input
         id="default-checkbox"
         type="checkbox"
-        value=""
+        :value="value"
         :class="
           twMerge(
             'w-4 h-4 cursor-pointer rounded bg-inherit border-truffle-400 text-blueberry-500 focus:ring-0 focus:ring-transparent',
@@ -47,5 +47,7 @@
       },
     },
   });
+
+  const value = defineModel<boolean>()
   </script>
   

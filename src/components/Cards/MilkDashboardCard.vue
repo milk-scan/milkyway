@@ -9,6 +9,7 @@
   >
     <div
       class="card-header inline-flex flex-wrap justify-between items-center gap-2"
+      v-if="!headerless"
     >
       <card-title :title="header.title" class="grow" />
       <filter-button v-if="header.filter" />
@@ -35,6 +36,10 @@ defineProps({
         link: "/",
       },
     },
+  },
+  headerless: {
+    type: Boolean,
+    default: false
   },
   styling: {
     default: {
